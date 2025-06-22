@@ -1,0 +1,6 @@
+gee:
+  project_name: "ee-kaloina4"
+  
+firms_NASA:
+  base_url: "https://firms.modaps.eosdis.nasa.gov/api/country/csv/"
+  API_key: '35ae49800327f79d4046cf4fd1f86349'
