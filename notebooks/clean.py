@@ -1,6 +1,6 @@
 import json
 
-file_name="01_exploration.ipynb"
+file_name="csv_NASA/01_exploration.ipynb"
 with open(file_name, "r", encoding='latin1') as f:
     data = json.load(f)
 
