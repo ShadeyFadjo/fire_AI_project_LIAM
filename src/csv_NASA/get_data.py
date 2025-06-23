@@ -1,2 +1,5 @@
+import utils
+import polars as pl
+
 def get_data():
-    return 0
+    return utils.get_config
