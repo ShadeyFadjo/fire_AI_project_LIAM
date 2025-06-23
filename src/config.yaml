@@ -5,5 +5,5 @@ gee:
   
 firms_NASA:
   API_url: "https://firms.modaps.eosdis.nasa.gov/api/country/csv/35ae49800327f79d4046cf4fd1f86349/MODIS_NRT/MDG/10/"
-  data_last_date: '2025-05-07'
-  raw_data_location: ''
+  data_last_date: '2025-04-26'
+  raw_data_location: '../data/raw/csv_NASA/modis/instrument_modis_2025/'
