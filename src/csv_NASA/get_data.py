@@ -1,15 +1,16 @@
 import utils
 import polars as pl
+from prefect import flow, task
 
 config=utils.get_config()
 
-#task
+@task
 def update_yaml_data_last_date():
     start_date=config['firms_NASA']['data_last_date']
     end_date=utils.add_days(start_date)
     utils.update_yaml('firms_NASA','data_last_date',end_date)
 
-# task
+@task
 def pre_save():
     start_date=config['firms_NASA']['data_last_date']
     end_date=utils.add_days(start_date)
@@ -19,11 +20,11 @@ def pre_save():
     df=pl.read_csv(url)
     df=df.drop(['country_id'])
     new_file=config['firms_NASA']['raw_data_location']+file_name+'.csv'
-    update_yaml_data_last_date()
     return df,new_file
 
-# flow
+@flow(name='get-new-data')
 def get_data():
     df, new_file=pre_save()
     df.write_csv(new_file, separator=';')
+    update_yaml_data_last_date()
     print('file: '+ new_file + ' created')
