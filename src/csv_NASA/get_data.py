@@ -30,4 +30,5 @@ def get_data():
     df, new_file=pre_save()
     df.write_csv(new_file, separator=';')
     update_yaml_data_last_date()
+    return new_file
     print('file: '+ new_file + ' created')
