@@ -9,8 +9,8 @@ if __name__ == "__main__":
     # raw_file='../data/raw/csv_NASA/modis/instrument_modis_2025/modis_2025-06-05_2025-06-14.csv'
     # preprocessing_csv.preprocess(raw_file)
 
-    csv_pipeline.pipeline()
+    # csv_pipeline.pipeline()
 
     # gee
-    # end_date='2025-06-20'
-    # get_data_image.get_data(end_date)
+    end_date='2025-06-20'
+    get_data_image.get_data(end_date)
