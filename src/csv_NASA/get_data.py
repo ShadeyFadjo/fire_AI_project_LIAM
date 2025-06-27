@@ -25,7 +25,7 @@ def pre_save():
     new_file=config['firms_NASA']['raw_data_location']+file_name+'.csv'
     return df,new_file
 
-@flow(name='get-new-data')
+@flow(name='get-new-data-csv')
 def get_data():
     df, new_file=pre_save()
     df.write_csv(new_file, separator=';')

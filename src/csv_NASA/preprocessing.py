@@ -28,7 +28,7 @@ def write_csv(df,raw_file):
     df.write_csv(loc_new_file,separator=';')
     return loc_new_file
 
-@flow(name='preprocess-new-data')
+@flow(name='preprocess-new-data-csv')
 def preprocess(raw_file):
     new_file = write_csv((drop_columns(filter_conf_type(pl.read_csv(raw_file, separator=';')))), raw_file)
     print('file processed: '+ new_file + ' created')
