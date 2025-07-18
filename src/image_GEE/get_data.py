@@ -28,7 +28,7 @@ def gee_images_into_png(sat_images,initial_date,until_date):
         filter_mada_fire= firms_country_images.filterDate(start_date, end_date)
         image=filter_mada_fire.max()
         imaget21=image.select('T21')
-        arrayt21 = geemap.ee_to_numpy(imaget21, region=country, scale=1000)
+        arrayt21 = geemap.ee_to_numpy(imaget21, region=country, scale=2000)
         arrayt21 = np.squeeze(arrayt21, axis=2)
         arrayt21[arrayt21 != 0] -= gray_normalization
         arrayt21 = arrayt21.astype(np.uint8)
