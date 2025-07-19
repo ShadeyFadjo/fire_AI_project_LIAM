@@ -12,5 +12,5 @@ if __name__ == "__main__":
     # csv_pipeline.pipeline()
 
     # gee
-    end_date='2025-06-20'
+    end_date='2025-07-15'
     get_data_image.get_data(end_date)
